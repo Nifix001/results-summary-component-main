@@ -15,7 +15,7 @@ function App() {
 
 const summary = data.map(x =>{
   return (
-    <div className="flex px-4 py-4 justify-between">
+    <div className="flex px-4 py-4 justify-between bg-${x.color}">
       <div className="flex gap-2">
         <img src={x.icon} alt="icon" />
         <p>{x.category}</p>
@@ -31,9 +31,9 @@ const summary = data.map(x =>{
     <>
     <div className="flex items-center justify-center h-screen w-screen">
       <div className="flex w-1/2 h-1/2">
-        <div className="bg-blue-600 h-full w-1/2 rounded-2xl text-center">
+        <div className="bg-gradient-to-b from-primary to-primary1 h-full w-1/2 rounded-2xl text-center">
           <h3>Your Result</h3>
-          <div className="bg-blue-500 rounded-full w-1/2 h-1/2 m-auto">
+          <div className="bg-gradient-to-b from-circle to-circle2 rounded-full w-1/2 h-1/2 m-auto">
             <span>{total}<br /> of 100</span>
           </div>
           <h3>Great</h3>
@@ -43,7 +43,7 @@ const summary = data.map(x =>{
             <h3 className="text-center">Summary</h3> 
             {summary}
             <div className="flex items-center justify-center">
-            <button className="">Continue</button>
+            <button className="bg-sec hover:bg-visual px-28 py-3 text-white rounded-3xl ">Continue</button>
             </div>
           </div>  
       </div>
