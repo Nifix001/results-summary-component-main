@@ -18,6 +18,12 @@ export default {
         'circle' : "hsla(256, 72%, 46%, 1)",
         'circle2': " hsla(241, 72%, 46%, 0)",
         'sec': " hsl(224, 30%, 27%)"
+      },
+      fontFamily: {
+        hanken: ['Hanken Grotesk']
+      },
+      screens: {
+        'xs': "375px" 
       }
     },
   },
