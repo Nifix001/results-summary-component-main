@@ -15,7 +15,7 @@ function App() {
 
 const summary = data.map(x =>{
   return (
-    <div className={`flex px-4 py-2 m-3 rounded-md justify-between bg-${x.color} ${x.color === 'reaction' ? 'bg-reaction' : ''} ${x.color === 'memory' ? 'bg-memory' : ''} ${x.color === 'verbal' ? 'bg-verbal' : ''}
+    <div className={`flex px-4 py-3 m-3 rounded-md justify-between bg-${x.color} ${x.color === 'reaction' ? 'bg-reaction' : ''} ${x.color === 'memory' ? 'bg-memory' : ''} ${x.color === 'verbal' ? 'bg-verbal' : ''}
     ${x.color === 'visual' ? 'bg-visual' : ''} bg-opacity-5`}>
       <div className="flex gap-2">
         <img src={x.icon} alt="icon" />
@@ -29,28 +29,30 @@ const summary = data.map(x =>{
 })
 
   return (
-    <>
+    <main>
     <div className="lg:max-2xl:flex lg:max-2xl:items-center lg:justify-center lg:max-2xl:h-screen lg:max-2xl:w-screen xs:max-md:h-screen xs:max-md:w-screen xs:max-md:-mt-4">
-      <div className="lg:max-2xl:flex lg:max-2xl:w-1/2 lg:max-2xl:h-1/2" >
-        <div className="bg-gradient-to-b from-primary to-primary1 h-full w-1/2 lg:max-2xl:rounded-2xl text-center text-white font-hanken xs:max-md:w-full xs:max-md:rounded-b-2xl">
-          <h3 className="my-4 text-gray-200 font-medium text-lg ">Your Result</h3>
-          <div className="bg-gradient-to-b from-circle to-circle2 lg:max-2xl:rounded-full lg:max-2xl:w-1/2 lg:max-2xl:h-1/2 m-auto pt-12">
+      <div className="lg:max-2xl:flex lg:max-2xl:w-1/2 lg:max-2xl:h-3/5 xs:max-md:w-screen xs:max-md:h-full xs:max-md:grid " >
+        <div className=" bg-gradient-to-b from-primary to-primary1 lg:max-2xl:h-full lg:max-2xl:w-1/2 lg:max-2xl:rounded-2xl xs:max-md:h-full xs:max-md:-mt-8 text-center text-white font-hanken xs:max-md:w-full xs:max-md:rounded-b-2xl xs:max-md:pb-12">
+          <header>
+          <h3 className=" text-gray-300 text-xl font-medium mt-12 ">Your Result</h3>
+          </header>
+          <div className="bg-gradient-to-b from-circle to-circle2 rounded-full w-1/3 xs:max-md:h-auto xs:max-md:w-1/3 h-fit grid items-center justify-center gap-0 m-auto p-6 mt-6">
             <span className=" text-6xl font-extrabold">{total}</span><br /><span className="font-medium text-gray-300 text-sm">of 100</span>
           </div>
-          <h3 className="text-2xl font-medium">Great</h3>
-          <p className="font-medium text-gray-300 text-sm">You scored higher than 65% of<br /> people who have taken<br /> these tests</p>
+          <h3 className="text-2xl mt-4 font-medium">Great</h3>
+          <p className="mt-6 font-medium text-gray-300 text-lg">You scored higher than 65% of<br /> people who have taken<br /> these tests</p>
         </div>
-          <div className="lg:max-2xl:h-full lg:max-2xl:w-1/2 lg:max-2xl:rounded-x-2xl shadow-2xl p-4">
-            <h3 className="text-lg text-left font-medium ml-3 mb-3">Summary</h3> 
+          <div className="lg:max-2xl:h-full lg:max-2xl:w-1/2 lg:max-2xl:rounded-x-2xl shadow-2xl py-4 px-4">
+            <h3 className="text-left text-xl font-medium my-8 ml-4 xs:max-md:-mt-8 xs:max-md:mb-0">Summary</h3> 
             {summary}
             <div className="flex items-center justify-center">
-            <button className="bg-sec hover:bg-visual px-28 py-3 text-white rounded-3xl mt-2">Continue</button>
+            <button className="bg-sec hover:bg-visual px-28 py-3 text-white rounded-3xl mt-8">Continue</button>
             </div>
           </div>  
       </div>
     </div>
     
-    </>
+    </main>
   )
 }
 
